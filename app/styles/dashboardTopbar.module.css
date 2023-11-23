@@ -58,6 +58,7 @@
 
   @media (max-width: 576px) {
     width: 100%;
+    padding: 0 2rem;
   }
 }
 
@@ -69,6 +70,7 @@
   color: #181F29;
   font-size: 1.8rem;
   letter-spacing: 1px;
+  height: 45px;
 }
 
 .secondSection input::placeholder {
@@ -78,4 +80,23 @@
 
 .inputWrapper {
   width: 80%;
+}
+
+.dropdownWrapper {
+  
+}
+
+.dropdownWrapper button {
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  border: none;
+  padding: 0 5rem;
+  height: 45px;
+}
+
+.dropdownWrapper button span {
+  display: flex;
+  font-size: 2.5rem;
+  margin-top: 2px;
 }

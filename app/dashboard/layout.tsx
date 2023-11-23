@@ -8,7 +8,7 @@ export default function DashboardLayout ({children}: { children: React.ReactNode
         <DashboardTopbar />
       </div>
       <div className={styles.dashboardContent}>
-        <h1>This is my other content</h1>
+        {children}
       </div>
     </div>
   );

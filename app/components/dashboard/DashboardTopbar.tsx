@@ -22,8 +22,10 @@ export default function DashboardTopbar (): React.ReactNode {
             onChange={(e)=>handleInputChange(e)}
           />
         </div>
-        <div className="dropdown-wrapper">
-          <button>dropdown</button>
+        <div className={styles.dropdownWrapper}>
+          <button>
+            <span>&#8964;</span>
+          </button>
         </div>
       </div>
     </div>

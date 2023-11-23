@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import Navbar from './components/navbar'
+import { ReduxProvider } from '@/redux/provider'
 
 export const metadata: Metadata = {
   title: 'Crypto Currency App',
@@ -18,8 +19,10 @@ export default function RootLayout({
         <title>Crypto Currency App</title>
       </head>
       <body>
-        <Navbar />
-        {children}
+        <ReduxProvider>
+          <Navbar />
+          {children}
+        </ReduxProvider>
       </body>
     </html>
   )

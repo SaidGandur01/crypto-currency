@@ -1,7 +1,10 @@
+import TableComponent from '../components/dashboard/tableComponent';
+import styles from '../styles/dashboardPage.module.css'
+
 export default function Dashboard (): React.ReactNode {
   return (
-    <div>
-      <h1>This is my dashboard</h1>
+    <div className={styles.dashboardPage}>
+      <TableComponent />
     </div>
   );
 }
