@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import Navbar from './components/navbar'
 
 export const metadata: Metadata = {
   title: 'Crypto Currency App',
@@ -16,7 +17,10 @@ export default function RootLayout({
       <head>
         <title>Crypto Currency App</title>
       </head>
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+      </body>
     </html>
   )
 }

@@ -1,0 +1,1 @@
+export type TNavigationItems = 'home' | 'dashboard';

@@ -1,0 +1,30 @@
+.ulWrapper {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.listItemNav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.navigationItem {
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 1.7rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  transition: font-size 0.3s;
+}
+
+.activeItem {
+  transform: translateY(-2px);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ffffff;
+  font-size: 1.8rem;
+}

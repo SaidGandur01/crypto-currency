@@ -1,0 +1,27 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 3rem 5rem;
+  background-color: var(--color-background-001);
+  color: var(--color-white);
+}
+
+.leftItems {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.navbarInfo {
+  color: var(--color-white);
+  font-size: 1.8rem;
+  font-weight: 900;
+  letter-spacing: 4.8px;
+  opacity: 1;
+}
+
+.leftItems {
+
+}
