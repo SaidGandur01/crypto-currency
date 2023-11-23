@@ -1,0 +1,81 @@
+.dashboardWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+  }
+}
+
+.firstSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 2rem 4rem;
+  width: fit-content;
+  background-color: #e73c17;
+  color: #ffffff;
+  height: 100px;
+
+  @media (max-width: 576px) {
+    padding: 2rem;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+}
+
+.firstSection h2 {
+  font-size: 2.4rem;
+  font-weight: 500;
+
+  @media (max-width: 576px) {
+    font-size: 1.7rem;
+  }
+}
+.firstSection span {
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+
+  @media (max-width: 576px) {
+    font-size: 1.5rem;
+  }
+}
+
+.secondSection {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: 1;
+  background-color: #181F29;
+  padding: 0 6rem;
+  height: 100px;
+  color: #ffffff;
+
+  @media (max-width: 576px) {
+    width: 100%;
+  }
+}
+
+.secondSection input {
+  width: 100%;
+  border: 1px solid #ffffff;
+  outline: none;
+  padding: 1rem 2rem;
+  color: #181F29;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+.secondSection input::placeholder {
+  color: #181F29;
+  font-weight: 500;
+}
+
+.inputWrapper {
+  width: 80%;
+}

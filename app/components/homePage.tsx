@@ -37,7 +37,7 @@ export default async function HomePage() {
       <div
         className={styles.firstColumn}
         style={{
-          backgroundImage: `url(${bitcoinImage.src})`,
+          backgroundImage: `linear-gradient(180deg, #181f29 0%, #181f2900 10%), url(${bitcoinImage.src})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',

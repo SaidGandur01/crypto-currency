@@ -10,7 +10,7 @@
   display: grid;
   place-content: center;
   width: 40%;
-  background: linear-gradient(180deg, #181f29 0%, #181f2900 10%), aliceblue;
+  /* background: linear-gradient(180deg, #181f29 0%, #181f2900 10%), aliceblue; */
 
   @media (max-width: 576px) {
     display: none;
