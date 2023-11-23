@@ -1,0 +1,63 @@
+.homePage {
+  width: 100%;
+  background-color: green;
+  height: calc(100vh - 130px);
+  display: flex;
+  justify-content: space-between;
+}
+
+.firstColumn {
+  display: grid;
+  place-content: center;
+  width: 40%;
+  background: linear-gradient(180deg, #181f29 0%, #181f2900 10%), aliceblue;
+
+  @media (max-width: 576px) {
+    display: none;
+  }
+}
+
+.secondColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 5rem 10rem;
+  flex-grow: 1;
+  background-color: #181F29;
+  color: white;
+
+  @media (max-width: 576px) {
+    padding: 3rem 6rem;
+    gap: 3rem;
+  }
+}
+
+.logoWrapper {
+  text-align: center;
+}
+
+.lineSeparator {
+  border: 1px solid #ffffff;
+  margin: 2rem 0;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.informationItems {
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  transition: font-size 0.3s;
+}
+
+.itemData {
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}

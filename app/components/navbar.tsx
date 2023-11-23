@@ -12,7 +12,7 @@ export default function Navbar() {
         </div>
         <h1 className={styles.navbarInfo}>All the crypto info you need</h1>
       </div>
-      <div className={styles.leftItems}>
+      <div>
         <Navigation />
       </div>
     </nav>
