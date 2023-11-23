@@ -1,6 +1,5 @@
 .homePage {
   width: 100%;
-  background-color: green;
   height: calc(100vh - 130px);
   display: flex;
   justify-content: space-between;
