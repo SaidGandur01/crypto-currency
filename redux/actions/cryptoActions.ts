@@ -11,6 +11,7 @@ import {
   FETCH_CRYPTO_DATA_FAILURE,
   FETCH_CRYPTO_DATA_REQUEST,
   FETCH_CRYPTO_DATA_SUCCESS,
+  SORT_DATA_TABLE,
 } from './actionTypes';
 
 export type TFetchCryptoDataRequest = SimpleFSA<
@@ -21,6 +22,9 @@ export type TFetchCryptoDatSuccess = FSA<
   ICryptoDataResponse[]
 >;
 export type TFetchCryptoDataFailure = FSA<typeof FETCH_CRYPTO_DATA_FAILURE, {}>;
+
+export type SortTableData = FSA<typeof SORT_DATA_TABLE, ICryptoDataResponse[]>;
+
 
 const fetchCryptosRequest = (): TFetchCryptoDataRequest => {
   return {
@@ -40,6 +44,13 @@ const fetchCryptosFailure = (error: ErrorResponse): TFetchCryptoDataFailure => {
     type: FETCH_CRYPTO_DATA_FAILURE,
     payload: error.message,
   };
+};
+
+export const sortDataTable = (sortedData: ICryptoDataResponse[]): SortTableData=> {
+  return {
+      type: SORT_DATA_TABLE,
+      payload: sortedData
+  }
 };
 
 export const fetchCryptoData = () => {

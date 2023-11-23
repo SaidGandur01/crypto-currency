@@ -1,0 +1,52 @@
+.tableWrapper {
+  width: 100vw;
+  padding: 5rem 10rem 10rem;
+  margin: 0;
+  background-color: #181F29;
+}
+
+.table {
+  width: 100%;
+  table-layout:auto;
+  border-collapse: collapse;
+  border-radius: 1rem;
+  overflow: hidden;
+  text-align: center;
+  background-color: #ffffff;
+  color: #181F29;
+}
+
+.tableHead {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  opacity: 1;
+}
+
+.tableHead th {
+  border: 2px solid #181F29;
+  cursor: pointer;
+  padding: 1.5rem 0;
+  transition: all 0.3s;
+}
+.tableHead th:nth-child(2n) {
+  background-color: #697c94;
+  color: white;
+}
+
+.tableHead th:hover {
+  background-color: #e73c17;
+  color: #ffffff;
+}
+
+.tableBody {
+  width: 100%;
+}
+
+.tableBody tr {
+  padding: 2rem 0;
+}
+
+.tableBody tr:nth-child(2n) {
+  background-color: #f9d6cf;
+}

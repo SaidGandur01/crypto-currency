@@ -1,0 +1,25 @@
+.tableRowWrapper {
+  width: 100%;
+}
+
+.tableRowWrapper:hover {
+  width: 100%;
+  background-color: #fae9e5;
+}
+
+.tableRowWrapper td{
+  padding: 1.5rem 0;
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.positivePrice {
+  font-weight: 700 !important;
+  color: green;
+}
+
+.negativePrice {
+  font-weight: 700 !important;
+  color: #e73c17;
+}

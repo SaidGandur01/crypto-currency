@@ -4,6 +4,7 @@ import {
   FETCH_CRYPTO_DATA_FAILURE,
   FETCH_CRYPTO_DATA_REQUEST,
   FETCH_CRYPTO_DATA_SUCCESS,
+  SORT_DATA_TABLE,
 } from '../actions/actionTypes';
 
 const cryptoSelectedInitialState: ICryptoDataResponse = {
@@ -45,6 +46,13 @@ export const cryptoReducer: ICryptoReducer = (
         return { ...state, error, loading: false };
       }
       return state;
+    }
+    case SORT_DATA_TABLE: {
+      if (action.payload){
+          const dataList = action.payload
+          return {...state, dataList}
+      }
+      return {...state}
     }
     default: {
       return state;
