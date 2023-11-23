@@ -83,7 +83,36 @@
 }
 
 .dropdownWrapper {
-  
+  position: relative;
+}
+
+.dropdownElement {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: 0;
+  z-index: 1001;
+  background-color: #ffffff;
+  width: 200px;
+  border: 1px solid #181F29;
+}
+
+.dropdownElement span {
+  padding: 2rem;
+  color: #181F29;
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.dropdownElement span:not(:last-child) {
+  border-bottom: 1px solid #181F29;
+}
+
+.dropdownElement span:hover {
+  cursor: pointer;
+  background-color: #c9cbcb;
+  color: #181F29;
 }
 
 .dropdownWrapper button {
