@@ -20,6 +20,10 @@
   font-weight: 900;
   letter-spacing: 4.8px;
   opacity: 1;
+
+  @media (max-width: 576px) {
+    display: none;
+  }
 }
 
 .leftItems {
