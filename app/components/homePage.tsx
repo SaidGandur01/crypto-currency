@@ -1,8 +1,9 @@
+import { TCryptoGeneralInformation } from '../utils/types';
 import bitcoinImage from '../../public/images/bitcoin.jpg';
+import ButtonPrimary from './core/homeButton';
 import Image from 'next/image';
 import logo from '../../public/images/logo.png';
 import styles from '../styles/homePage.module.css';
-import { TCryptoGeneralInformation } from '../utils/types';
 
 const fetchCryptoInformation = async (): Promise<
   TCryptoGeneralInformation[]
@@ -20,6 +21,7 @@ const fetchCryptoInformation = async (): Promise<
 export default async function HomePage() {
   const [response]: TCryptoGeneralInformation[] =
     await fetchCryptoInformation();
+
   const {
     total_volume,
     eth_d,
@@ -43,7 +45,7 @@ export default async function HomePage() {
       ></div>
       <div className={styles.secondColumn}>
         <div className={styles.logoWrapper}>
-          <Image src={logo} alt='logo-image' width={150} height={140} />
+          <Image src={logo} alt='logo-image' width={120} height={110} />
         </div>
         <hr className={styles.lineSeparator} />
         <div className={styles.information}>
@@ -75,6 +77,9 @@ export default async function HomePage() {
             All-time high market cap:{' '}
             <span className={styles.itemData}>${mcap_ath}.</span>
           </h4>
+        </div>
+        <div className={styles.buttonWrapper}>
+          <ButtonPrimary label='Go to dashboard' />
         </div>
       </div>
     </div>

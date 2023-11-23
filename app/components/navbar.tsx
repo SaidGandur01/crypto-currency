@@ -10,7 +10,7 @@ export default function Navbar() {
         <div>
           <Image src={logo} alt='logo-image' width={80} height={70} />
         </div>
-        <h1 className={styles.navbarInfo}>All the crypto info you need</h1>
+        <h1 className={styles.navbarInfo}>Your complete crypto guide</h1>
       </div>
       <div>
         <Navigation />

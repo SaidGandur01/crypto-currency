@@ -1,0 +1,23 @@
+.button {
+  cursor: pointer;
+  background: #ffffff34 0 0 no-repeat padding-box;
+  border: 1px solid #ffffff;
+  transition: all .1s;
+  min-width: 15rem;
+  padding: 2rem 4rem;
+  width: 50%;
+
+  color: white;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  @media (max-width: 576px) {
+    width: 80%;
+    font-size: 1.2rem;
+  }
+}
+
+.button:hover {
+  background: #999999;
+}

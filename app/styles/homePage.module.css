@@ -21,13 +21,13 @@
   display: flex;
   flex-direction: column;
   gap: 5rem;
-  padding: 5rem 10rem;
+  padding: 2rem 10rem;
   flex-grow: 1;
   background-color: #181F29;
   color: white;
 
   @media (max-width: 576px) {
-    padding: 3rem 6rem;
+    padding: 3rem 1rem;
     gap: 3rem;
   }
 }
@@ -37,8 +37,9 @@
 }
 
 .lineSeparator {
+  width: 80%;
   border: 1px solid #ffffff;
-  margin: 2rem 0;
+  margin: 1rem auto;
 }
 
 .information {
@@ -55,9 +56,21 @@
   font-weight: 400;
   letter-spacing: 1px;
   transition: font-size 0.3s;
+
+  @media (max-width: 576px) {
+    font-size: 1.3rem;
+  }
 }
 
 .itemData {
   font-weight: 600;
   letter-spacing: 1.5px;
+}
+
+.buttonWrapper {
+  text-align: center;
+
+  @media (max-width: 576px) {
+    margin-top: 5rem;
+  }
 }

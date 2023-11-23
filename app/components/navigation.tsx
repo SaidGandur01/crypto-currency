@@ -1,19 +1,27 @@
 'use client';
-
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from '../styles/navigation.module.css';
 import { ROUTES } from '../utils/constants';
 import { TRoute, TNavigationItems } from '../utils/types';
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 
 export default function Navigation() {
   const [currentItem, setCurrentItem] = useState<TNavigationItems>('home');
   const router = useRouter();
+  const pathName = usePathname();
 
   const onToggleChange = (route: TRoute): void => {
     setCurrentItem(route.label);
     router.push(route.route)
   }
+
+  useEffect(() => {
+    const pathMap: { [key: string]: TNavigationItems } = {
+      '/': 'home',
+      '/dashboard': 'dashboard'
+    };
+    setCurrentItem(pathMap[pathName]);
+  }, [pathName]);
 
   return (
     <div>
