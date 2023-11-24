@@ -15,6 +15,7 @@ const cryptoSelectedInitialState: ICryptoDataResponse = {
   percent_change_24h: '',
   price_usd: '',
   rank: 0,
+  symbol: ''
 };
 
 const initialState: ICryptoState = {
