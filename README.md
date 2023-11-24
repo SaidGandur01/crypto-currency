@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Millionandup frontend test
 
-## Getting Started
+## This project represents a crypto currency app created with nuxt js version 13
 
-First, run the development server:
+1. Use of the nextjs framework for react, version 13.
+2. Integration of flux architecture.
+3. The integration of a good architecture of code following the best practices.
+4. Creation of reusable components.
+5. For the creation of the sections the main css/scss focuses were flexbox and grid.
+6. The website is completely responsive and has been though for mobile devices as well.
+7. The project follows the design at high level.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Deployment
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The project has been deployed to this link: [vue project](https://crypto-currency-chi.vercel.app/).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This project was created using npm to install all the dependencies, in order to run it locally please follow these steps:
 
-## Learn More
+1. npm run install
 
-To learn more about Next.js, take a look at the following resources:
+2. npm run dev
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The development server runs on `http://localhost:3000`:
