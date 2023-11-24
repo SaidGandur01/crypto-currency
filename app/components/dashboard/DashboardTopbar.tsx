@@ -1,34 +1,54 @@
-'use client'
+'use client';
 import { ChangeEvent, useState } from 'react';
-import styles from '../../styles/dashboardTopbar.module.css'
-import { useSelector } from 'react-redux';
 import { getCryptoDataList } from '@/redux/selector/selector';
 import { ICryptoDataResponse } from '@/app/utils/types';
+import { useRouter } from 'next/navigation';
+import { useSelector } from 'react-redux';
+import styles from '../../styles/dashboardTopbar.module.css';
 
-export default function DashboardTopbar (): React.ReactNode {
-
+export default function DashboardTopbar(): React.ReactNode {
   const [searchKey, setSearchKey] = useState<string>('');
   const [showDropdown, setShowDropdown] = useState<boolean>(false);
-  const [dropdownOption, setDropdownOption] = useState<ICryptoDataResponse[]>([]);
+  const [dropdownOption, setDropdownOption] = useState<ICryptoDataResponse[]>(
+    []
+  );
 
   const cryptoData = useSelector(getCryptoDataList);
+  const router = useRouter();
 
   const onToggleDropdown = (): void => {
-    setShowDropdown(!showDropdown)
-  }
+    setShowDropdown(!showDropdown);
+  };
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const currentValue = e.target.value
+    const currentValue = e.target.value;
     setSearchKey(currentValue);
 
-    const filteredDataList = cryptoData.filter((crypto: ICryptoDataResponse) => {
-      const name = crypto.name.toLowerCase();
-      const filteredData = name.includes(searchKey.toLowerCase());
-      return filteredData;
-    });
+    const filteredDataList = cryptoData.filter(
+      (crypto: ICryptoDataResponse) => {
+        const name = crypto.name.toLowerCase();
+        const filteredData = name.includes(searchKey.toLowerCase());
+        return filteredData;
+      }
+    );
 
-    const optionsToRender = filteredDataList.slice(0,8);
+    let optionsToRender: any = [];
+    if (currentValue !== '') {
+      setShowDropdown(true);
+      optionsToRender = filteredDataList.slice(0, 8);
+      setDropdownOption(optionsToRender);
+    } else {
+      setShowDropdown(false);
+    }
+
     setDropdownOption(optionsToRender);
+  };
+
+  const onHandleSelect = (cryptoId: string): void => {
+    setShowDropdown(false);
+    setDropdownOption([]);
+    setSearchKey('');
+    router.push(`/dashboard/${cryptoId}`)
   };
 
   return (
@@ -40,9 +60,10 @@ export default function DashboardTopbar (): React.ReactNode {
       <div className={styles.secondSection}>
         <div className={styles.inputWrapper}>
           <input
-            type="text"
+            type='text'
+            value={searchKey}
             placeholder='Search by crypto'
-            onChange={(e)=>handleInputChange(e)}
+            onChange={(e) => handleInputChange(e)}
           />
         </div>
         <div className={styles.dropdownWrapper}>
@@ -53,8 +74,13 @@ export default function DashboardTopbar (): React.ReactNode {
             <div className={styles.dropdownElement}>
               {dropdownOption?.map((crypto: ICryptoDataResponse) => {
                 return (
-                  <span key={crypto.id}>{crypto.name}</span>
-                )
+                  <span
+                    key={crypto.id}
+                    onClick={() => onHandleSelect(crypto.id)}
+                  >
+                    {crypto.name}
+                  </span>
+                );
               })}
             </div>
           )}

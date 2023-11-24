@@ -1,5 +1,6 @@
 .tableWrapper {
   width: 100vw;
+  min-height: 100vh;
   padding: 5rem 10rem 10rem;
   margin: 0;
   background-color: #181F29;

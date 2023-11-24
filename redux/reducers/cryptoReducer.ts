@@ -1,6 +1,7 @@
 import { ICryptoState, ICryptoDataResponse } from '@/app/utils/types';
 import { AnyAction, Reducer } from '@reduxjs/toolkit';
 import {
+  FETCH_CRYPTO_DATA_BY_ID_SUCCESS,
   FETCH_CRYPTO_DATA_FAILURE,
   FETCH_CRYPTO_DATA_REQUEST,
   FETCH_CRYPTO_DATA_SUCCESS,
@@ -53,6 +54,12 @@ export const cryptoReducer: ICryptoReducer = (
           return {...state, dataList}
       }
       return {...state}
+    }
+    case FETCH_CRYPTO_DATA_BY_ID_SUCCESS: {
+      if (action.payload) {
+        const cryptoSelected = action.payload
+        return { ...state, cryptoSelected }
+      }
     }
     default: {
       return state;

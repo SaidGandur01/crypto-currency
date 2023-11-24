@@ -1,12 +1,14 @@
 import { Action } from "@reduxjs/toolkit";
+import type { MiddlewareAPI } from 'redux';
 
 export type ICryptoDataResponse = {
   id: string;
   name: string;
   percent_change_1h: string;
   percent_change_24h: string;
-  price_usd: string
-  rank: number
+  price_usd: string;
+  rank: number;
+  symbol: string;
 };
 
 export type ICryptoState = {
@@ -32,3 +34,11 @@ export interface SimpleFSA<T> extends Action {
 export interface FSA<T, P> extends SimpleFSA<T> {
   payload?: P;
 };
+
+export type Dispatch<A> = {
+  <T extends A>(action: T): T
+};
+
+export type TCryptoStoreMiddleware = MiddlewareAPI<Dispatch<any>, StateCrypto>;
+
+export type NextCrypto = Dispatch<any>;

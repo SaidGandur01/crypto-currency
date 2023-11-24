@@ -1,0 +1,38 @@
+.currencySelectedWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 10rem;
+  width: 100%;
+  background-color: #ffffff;
+  background: linear-gradient(180deg, #181f29 0%, #181f2900 10%);
+  min-height: calc(100vh - 230px);
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.firstColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #181f29;
+}
+
+.secondColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #181f29;
+}
