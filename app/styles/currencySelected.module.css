@@ -1,7 +1,7 @@
 .currencySelectedWrapper {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  gap: 3.5rem;
   padding-top: 10rem;
   width: 100%;
   background-color: #ffffff;
@@ -25,6 +25,10 @@
   font-weight: 600;
   letter-spacing: 1px;
   color: #181f29;
+
+  @media (max-width: 576px) {
+    font-size: 1.8rem;
+  }
 }
 
 .secondColumn {
@@ -35,4 +39,13 @@
   font-weight: 600;
   letter-spacing: 1px;
   color: #181f29;
+
+  @media (max-width: 576px) {
+    font-size: 1.8rem;
+  }
+}
+
+.imageWrapper {
+  margin-top: 3rem;
+  text-align: center;
 }

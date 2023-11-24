@@ -1,21 +1,26 @@
-'use client'
-import { useDispatch, useSelector } from 'react-redux';
-import styles from '../../styles/currencySelected.module.css'
-import { useEffect } from 'react';
+'use client';
 import { fetchCryptoById } from '@/redux/actions/cryptoActions';
 import { getCryptoSelectedById } from '@/redux/selector/selector';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import Image from 'next/image';
+import styles from '../../styles/currencySelected.module.css';
+import logo from '../../../public/images/logo.png';
 
-export default function CurrencySelected ({ params }: { params: any }): React.ReactNode {
+export default function CurrencySelected({
+  params,
+}: {
+  params: any;
+}): React.ReactNode {
   const dispatch = useDispatch();
   const { id } = params;
 
   useEffect(() => {
-    dispatch(fetchCryptoById(id))
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    dispatch(fetchCryptoById(id));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const currentCrypto = useSelector(getCryptoSelectedById);
-  console.log('aca: ', currentCrypto)
 
   return (
     <div className={styles.currencySelectedWrapper}>
@@ -30,6 +35,14 @@ export default function CurrencySelected ({ params }: { params: any }): React.Re
           <span>{currentCrypto.symbol}</span>
           <span>${currentCrypto.price_usd}</span>
         </div>
+      </div>
+      <div className={styles.imageWrapper}>
+        <Image
+          src={logo}
+          alt='logo-image'
+          width={200}
+          height={190}
+        />
       </div>
     </div>
   );
