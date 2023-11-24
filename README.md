@@ -12,7 +12,7 @@
 
 ## Deployment
 
-The project has been deployed to this link: [vue project](https://crypto-currency-chi.vercel.app/).
+The project has been deployed to this link: [Crypto currency app](https://crypto-currency-chi.vercel.app/).
 
 ## Setup
 
